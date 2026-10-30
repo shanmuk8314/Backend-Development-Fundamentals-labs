@@ -196,10 +196,6 @@ The following screenshots demonstrate the working application and API testing pe
 
 ![DELETE Book](./Screenshots/delete-book.png.png)
 
-### 7. Book Not Found Response
-
-![Book Not Found](./Screenshots/not-found.png.png)
-
 ## Important Concepts Learned
 
 - Connecting an Express.js application to an SQLite database.
