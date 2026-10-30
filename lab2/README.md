@@ -174,31 +174,31 @@ The following screenshots demonstrate the working application and API testing pe
 
 ### 1. Application Home Page
 
-![Home Page](./Screenshots/home.png)
+![Home Page](./Screenshots/home.png.png)
 
 ### 2. GET All Books
 
-![GET All Books](./Screenshots/get-all-books.png)
+![GET All Books](./Screenshots/get-all-books.png.png)
 
 ### 3. GET Book by ID
 
-![GET Book by ID](./Screenshots/get-book-by-id.png)
+![GET Book by ID](./Screenshots/get-book-by-id.png.png)
 
 ### 4. POST a New Book
 
-![POST Book](./Screenshots/post-book.png)
+![POST Book](./Screenshots/post-book.png.png)
 
 ### 5. PUT Update Book
 
-![PUT Book](./Screenshots/put-book.png)
+![PUT Book](./Screenshots/put-book.png.png)
 
 ### 6. DELETE Book
 
-![DELETE Book](./Screenshots/delete-book.png)
+![DELETE Book](./Screenshots/delete-book.png.png)
 
 ### 7. Book Not Found Response
 
-![Book Not Found](./Screenshots/not-found.png)
+![Book Not Found](./Screenshots/not-found.png.png)
 
 ## Important Concepts Learned
 
