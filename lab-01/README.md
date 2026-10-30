@@ -111,7 +111,6 @@ The Express application listens on port 3000 locally and uses the port configure
 - **About:** [Open About Route](https://backend-development-fundamentals-lab-1.onrender.com/about)
 - **Time:** [Open Time Route](https://backend-development-fundamentals-lab-1.onrender.com/time)
 - **404 Test:** [Test Unknown Route](https://backend-development-fundamentals-lab-1.onrender.com/unknown)
-
 ## Screenshots
 
 Screenshots of the working application are stored in the `screenshots/` directory.
@@ -131,6 +130,7 @@ Screenshots of the working application are stored in the `screenshots/` director
 ### 4. Unknown Route — 404 Not Found
 
 ![404 Route](./screenshots/not-found.png)
+
 
 ## Problems Faced and Solutions
 
