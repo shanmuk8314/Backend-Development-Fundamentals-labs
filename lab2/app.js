@@ -1,3 +1,4 @@
+
 const express = require("express");
 const openDatabase = require("./database");
 
@@ -10,7 +11,6 @@ let db;
 const initializeDBAndServer = async () => {
   try {
     db = await openDatabase();
-
     await db.run(`
       CREATE TABLE IF NOT EXISTS book (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -22,13 +22,12 @@ const initializeDBAndServer = async () => {
     `);
 
     console.log("Book table created successfully");
-
     const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
     });
+
   } catch (error) {
     console.log(`Database error: ${error.message}`);
     process.exit(1);
@@ -62,9 +61,11 @@ app.get("/", (request, response) => {
     <h3>DELETE /books/:bookId/</h3>
     <p>Delete a book using its ID.</p>
 
+
     <p>Server Status: Running</p>
   `);
 });
+
 
 app.get("/books/", async (request, response) => {
   try {
@@ -75,10 +76,12 @@ app.get("/books/", async (request, response) => {
     const books = await db.all(query);
 
     response.status(200).send(books);
+
   } catch (error) {
     response.status(500).send({ error: error.message });
   }
 });
+
 
 app.get("/books/:bookId/", async (request, response) => {
   try {
@@ -92,14 +95,18 @@ app.get("/books/:bookId/", async (request, response) => {
     const book = await db.get(query, bookId);
 
     if (book === undefined) {
-      response.status(404).send({ message: "Book not found" });
+      response.status(404).send({
+        message: "Book not found"
+      });
     } else {
       response.status(200).send(book);
     }
+
   } catch (error) {
     response.status(500).send({ error: error.message });
   }
 });
+
 
 app.post("/books/", async (request, response) => {
   try {
@@ -110,16 +117,24 @@ app.post("/books/", async (request, response) => {
       VALUES (?, ?, ?, ?);
     `;
 
-    const result = await db.run(query, title, author, price, pages);
+    const result = await db.run(
+      query,
+      title,
+      author,
+      price,
+      pages
+    );
 
     response.status(201).send({
       message: "Book added successfully",
       bookId: result.lastID
     });
+
   } catch (error) {
     response.status(500).send({ error: error.message });
   }
 });
+
 
 app.put("/books/:bookId/", async (request, response) => {
   try {
@@ -142,14 +157,20 @@ app.put("/books/:bookId/", async (request, response) => {
     );
 
     if (result.changes === 0) {
-      response.status(404).send({ message: "Book not found" });
+      response.status(404).send({
+        message: "Book not found"
+      });
     } else {
-      response.status(200).send({ message: "Book updated successfully" });
+      response.status(200).send({
+        message: "Book updated successfully"
+      });
     }
+
   } catch (error) {
     response.status(500).send({ error: error.message });
   }
 });
+
 
 app.delete("/books/:bookId/", async (request, response) => {
   try {
@@ -163,14 +184,20 @@ app.delete("/books/:bookId/", async (request, response) => {
     const result = await db.run(query, bookId);
 
     if (result.changes === 0) {
-      response.status(404).send({ message: "Book not found" });
+      response.status(404).send({
+        message: "Book not found"
+      });
     } else {
-      response.status(200).send({ message: "Book deleted successfully" });
+      response.status(200).send({
+        message: "Book deleted successfully"
+      });
     }
+
   } catch (error) {
     response.status(500).send({ error: error.message });
   }
 });
+
 
 initializeDBAndServer();
 
