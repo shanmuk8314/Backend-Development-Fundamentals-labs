@@ -17,6 +17,11 @@
 | Registration Number | 252U1R9137        |
 | Section             | CSE - GEN-AI - 2C |
 
+# Live Deployment
+
+Deployed Application: https://backend-lab-2-r9dc.onrender.com/
+
+The application is deployed using Render. You can access the home page and test the available API endpoints using the deployed URL.
 ## Project Objective
 
 The objective of this lab is to connect an Express.js application with an SQLite database and implement CRUD (Create, Read, Update, Delete) operations through HTTP API endpoints.
