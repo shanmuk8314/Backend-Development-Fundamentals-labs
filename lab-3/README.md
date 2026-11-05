@@ -19,13 +19,22 @@
 
 ## Live Deployment
 
-The application is currently tested locally using Postman.
+The RESTful Book Management API is deployed on Render.
 
-Local Application URL:
+**Live API URL:** [https://backend-lab-3-ziaw.onrender.com](https://backend-lab-3-ziaw.onrender.com)
 
-```text
-http://localhost:3000/
-```
+### API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/` | Welcome message |
+| GET | `/about/` | API information |
+| GET | `/books/` | Retrieve all books |
+| GET | `/books/:bookId/` | Retrieve a book by ID |
+| POST | `/books/` | Add a new book |
+| PUT | `/books/:bookId/` | Update a book |
+| DELETE | `/books/:bookId/` | Delete a book |
+
 
 ## Project Objective
 
