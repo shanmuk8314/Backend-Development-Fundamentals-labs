@@ -345,13 +345,7 @@ Checks the API response when an unsupported sorting column is provided.
 
 ![Test invalid order_by value](Screenshots/Test%20invalid%20order_by%20value.png)
 
-### 14. Update a Non-Existing Book
-
-Checks the API response when a PUT request uses a book ID that does not exist.
-
-![Test PUT with a book ID that doesn't exist](Screenshots/Test%20PUT%20with%20a%20book%20ID%20that%20doesn't%20exist.png)
-
-### 15. Delete a Non-Existing Book
+### 14. Delete a Non-Existing Book
 
 Checks the API response when a DELETE request uses a book ID that does not exist.
 
