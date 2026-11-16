@@ -226,6 +226,71 @@ node_modules/
 
 Do not commit `node_modules/`, environment files, API keys, passwords, or other sensitive credentials.
 
+## Viva Questions and Answers
+
+### 1. What is Node.js?
+Node.js is a JavaScript runtime environment that allows us to execute JavaScript outside the browser.
+
+### 2. What is Express.js?
+Express.js is a Node.js framework used to build web servers and REST APIs easily.
+
+### 3. What is SQLite?
+SQLite is a lightweight, file-based relational database that stores data in a single database file.
+
+### 4. What is CRUD?
+CRUD stands for Create, Read, Update, and Delete. These are the four basic database operations.
+
+### 5. What is the purpose of `server.js`?
+`server.js` contains the Express server configuration, middleware, database connection, and API routes.
+
+### 6. What is the purpose of `init-db.js`?
+It creates the database table and inserts initial sample book records.
+
+### 7. What is a REST API?
+A REST API allows applications to communicate using HTTP methods and resource-based URLs.
+
+### 8. Which HTTP methods are used for CRUD operations?
+- POST – Create
+- GET – Read
+- PUT – Update
+- DELETE – Delete
+
+### 9. What is middleware in Express.js?
+Middleware is a function that executes during the request-response cycle. It can process requests, modify responses, or pass control to the next middleware.
+
+### 10. What is `express.json()`?
+It is built-in Express middleware that parses incoming JSON request bodies and makes the data available through `req.body`.
+
+### 11. What is a route parameter?
+A route parameter is a dynamic value in a URL. For example, `/books/:id` uses `id` to identify a particular book.
+
+### 12. What is the difference between GET and POST?
+GET retrieves data from the server, whereas POST sends data to the server to create a new resource.
+
+### 13. What is the difference between PUT and DELETE?
+PUT updates an existing resource, whereas DELETE removes a resource.
+
+### 14. What is a primary key?
+A primary key is a column that uniquely identifies each record in a database table.
+
+### 15. What is the purpose of `books.db`?
+It is the SQLite database file that stores the book records.
+
+### 16. What is an SQL query?
+An SQL query is a command used to communicate with a relational database to retrieve or modify data.
+
+### 17. What is HTTP status code 404?
+It means the requested resource was not found.
+
+### 18. What is HTTP status code 201?
+It indicates that a new resource has been successfully created.
+
+### 19. Why do we use Postman?
+Postman is used to send HTTP requests and test API endpoints without building a frontend.
+
+### 20. What happens if a book ID does not exist?
+The API should return a 404 Not Found response.
+
 ## Conclusion
 
 This lab provided practical experience in integrating SQLite with an Express.js backend application. It helped develop an understanding of relational database operations and implementing REST APIs to create, retrieve, update, and delete book records.
