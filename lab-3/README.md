@@ -378,6 +378,111 @@ node_modules/
 
 Do not commit `node_modules/`, environment files, API keys, passwords, or other sensitive credentials.
 
+## Viva Questions and Answers
+
+### 1. What is a RESTful API?
+A RESTful API is an API that follows REST principles and uses HTTP methods to perform operations on resources.
+
+### 2. What is the difference between Lab 2 and Lab 3?
+Lab 2 focuses on basic SQLite CRUD operations. Lab 3 extends the API with searching, sorting, pagination, price filtering, input validation, and error handling.
+
+### 3. What are query parameters?
+Query parameters are optional values passed in a URL after a question mark to filter or customize the requested data.
+
+Example:
+`/books?search_q=Atomic`
+
+### 4. What is the difference between route parameters and query parameters?
+Route parameters identify a specific resource, while query parameters filter or customize the results.
+
+Example:
+- Route parameter: `/books/5`
+- Query parameter: `/books?search_q=Atomic`
+
+### 5. What is searching in an API?
+Searching allows users to find records based on a particular keyword or value.
+
+### 6. What is sorting?
+Sorting arranges records in ascending or descending order based on a selected column.
+
+### 7. What is the difference between ASC and DESC?
+ASC sorts records in ascending order, while DESC sorts records in descending order.
+
+### 8. What is pagination?
+Pagination divides a large set of records into smaller pages instead of returning all records at once.
+
+### 9. What is the purpose of LIMIT?
+LIMIT specifies the maximum number of records returned by an SQL query.
+
+### 10. What is the purpose of OFFSET?
+OFFSET specifies how many records should be skipped before returning results.
+
+### 11. What is price filtering?
+Price filtering retrieves books within a specified price range using minimum and maximum price values.
+
+### 12. What is input validation?
+Input validation checks whether the data received from a user is correct and acceptable before processing it.
+
+### 13. Why is input validation important?
+It prevents invalid data from entering the database and helps maintain data consistency.
+
+### 14. What is SQL injection?
+SQL injection is an attack where malicious SQL statements are inserted through user input to manipulate a database.
+
+### 15. How can SQL injection be prevented?
+By using parameterized SQL queries instead of directly inserting user input into SQL statements.
+
+### 16. Why do we validate sorting columns?
+To prevent invalid column names and unsafe SQL query construction.
+
+### 17. What is HTTP status code 200?
+It indicates that the request was successful.
+
+### 18. What is HTTP status code 201?
+It indicates that a resource was successfully created.
+
+### 19. What is HTTP status code 400?
+It indicates that the client sent an invalid request.
+
+### 20. What is HTTP status code 404?
+It indicates that the requested resource was not found.
+
+### 21. What is HTTP status code 500?
+It indicates an internal server error.
+
+### 22. What is error handling?
+Error handling manages unexpected situations and returns appropriate error responses instead of allowing the application to fail unexpectedly.
+
+### 23. What is the purpose of `req.params`?
+It accesses route parameters from the URL.
+
+### 24. What is the purpose of `req.query`?
+It accesses query parameters from the URL.
+
+### 25. What is the purpose of `req.body`?
+It accesses data sent in the request body, usually in JSON format.
+
+### 26. What is the purpose of parameterized queries?
+They safely pass user-provided values into SQL statements and help prevent SQL injection.
+
+### 27. Which database is used in Lab 3?
+SQLite is used to store the book records in the `books.db` database file.
+
+### 28. Which query parameters are supported in Lab 3?
+- `search_q` – Search books
+- `order_by` – Select sorting column
+- `order` – ASC or DESC
+- `limit` – Number of records
+- `offset` – Number of records to skip
+- `min_price` – Minimum price
+- `max_price` – Maximum price
+
+### 29. What happens when an invalid sorting column is provided?
+The API returns a validation error instead of executing an unsafe or invalid sorting query.
+
+### 30. How did you test your REST API?
+I tested the API using HTTP requests and checked the responses, CRUD operations, query parameters, validation, and error handling.
+
 ## Conclusion
 
 This lab provided practical experience in developing a RESTful API using Express.js and SQLite. It helped develop an understanding of database connectivity, CRUD operations, query parameters, searching, sorting, filtering, pagination, and request validation.
